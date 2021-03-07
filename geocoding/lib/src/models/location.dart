@@ -7,14 +7,14 @@ class Location {
   /// instances constructed this way won't actually reflect any real information
   /// from the platform, just whatever was passed in at construction time.
   Location({
-    this.latitude,
-    this.longitude,
+    required this.latitude,
+    required this.longitude,
     this.timestamp,
   });
 
   Location._({
-    this.latitude,
-    this.longitude,
+    required this.latitude,
+    required this.longitude,
     this.timestamp,
   });
 
@@ -25,7 +25,7 @@ class Location {
   final double longitude;
 
   /// The UTC timestamp the coordinates have been requested.
-  final DateTime timestamp;
+  final DateTime? timestamp;
 
   @override
   bool operator ==(dynamic o) =>
